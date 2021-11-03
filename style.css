@@ -15,16 +15,29 @@ body{
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
   /* styles */
   background: url("/images/bg-mobile.png");
-
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
 }
 
 /* styles */
+.wrapper{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  border: 1px sienna solid;
+}
+
 .cont{
   width: 80%;
   background-color: hsl(228, 56%, 26%);
+  height: 152px;
 }
 
 .cont-1{
@@ -34,6 +47,7 @@ body{
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2,1fr);
+  min-width: 170px;
 }
 
 .logo{
@@ -83,7 +97,13 @@ body{
   position: relative;
 }
 .cont-2-p{
-  font-size: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.cont-2-p span{
+  font-weight: 700;
 }
 
 .bar{
@@ -149,6 +169,8 @@ body{
   font-size: 30px;
   /* margin: 0 auto; */
   font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
 .white p span{
@@ -161,3 +183,35 @@ body{
 - Grayish Blue: hsl(229, 7%, 55%)
 - Dark Blue: hsl(228, 56%, 26%)
 - Very Dark Blue: hsl(229, 57%, 11%) */
+
+
+/* media queries */
+
+@media (min-width:768px) {
+  .cont{
+    border: 1px solid;
+  }
+ .wrapper{
+   display: grid;
+   grid-template-columns: 30% 70%;
+   grid-template-rows: auto;
+   width: 80%;
+   max-width: 900px;
+ }
+
+ .white{
+  top: -36%;
+  left: 70%;
+  width: 20%;
+ }
+
+ .cont-2{
+  align-self: end;
+  width: 100%;
+ }
+
+ .cont-2-p{
+  text-align: start;
+}
+  
+}
